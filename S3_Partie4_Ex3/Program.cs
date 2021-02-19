@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace S3_Partie4_Ex3
 {
@@ -10,15 +11,13 @@ namespace S3_Partie4_Ex3
             int result = 0;
             List<int> number = new List<int>() { 10, 12, 19, 25, 28};
 
-            for (int i = 0; i < number.Count; i++)
-            {
-                result += number[i];
-                
-            }
+            result = number.Sum();
 
             Console.WriteLine($"le résultat de ton addition est de {result}");
-            
 
+            //
+            string usedNumber = String.Join(" + ", number);
+            Console.WriteLine(usedNumber);
         }
     }
 }
